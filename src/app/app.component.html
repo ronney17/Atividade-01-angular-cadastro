@@ -1,0 +1,82 @@
+<div class="d-flex flex-wrap justify-content-center align-items-center">
+  <div class="container">
+      <h1 class="text-center py-5">Atividade 1 de Usabilidade, desenvolvimento web, mobile e jogo com Angular,
+          HTML,
+          CSS e bootstrap.
+      </h1>
+
+      <!-- Crud views -->
+      <fieldset id="desabilitar" [disabled]="esconderInputs">
+          <div class="row">
+              <div class="col-md-2">
+                  <fieldset disabled>
+                      <label for="id">Id</label>
+                      <input type="number" class="form-control" id="id" placeholder="Id é automático">
+                  </fieldset>
+              </div>
+              <div class="col">
+                  <label for="nome">Nome</label>
+                  <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6">
+                  <label for="endereco">Endereço</label>
+                  <input type="text" class="form-control" id="endereco" placeholder="Digite seu endereço">
+
+                  <label for="cidade">Cidade</label>
+                  <input type="text" class="form-control" id="cidade" placeholder="Digite sua cidade">
+              </div>
+              <div class="col-md-6">
+                  <label for="bairro">Bairro</label>
+                  <input type="text" class="form-control" id="bairro" placeholder="Digite seu bairro">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <label for="cep">Cep</label>
+                          <input type="text" class="form-control" id="cep" placeholder="Digite seu CEP">
+                      </div>
+                      <div class="col-md-6">
+                          <label for="telefone">Telefone</label>
+                          <input type="text" class="form-control" id="telefone" placeholder="Digite seu telefone">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </fieldset>
+
+      <!-- botões padrão -->
+      <div [hidden]="mostrarBtn">
+          <div class="d-flex justify-content-around py-5">
+              <button type="submit" class="btn btn-success" (click)="novo()">Novo</button>
+              <button type="submit" class="btn btn-success" (click)="novo()">Editar</button>
+              <button type="submit" class="btn btn-success" (click)="procurar()">Procurar</button>
+              <button type="submit" class="btn btn-success" (click)="excluir()">Excluir</button>
+          </div>
+      </div>
+
+      <!-- Cadastrar -->
+      <div [hidden]="mostrarBtnCadastro">
+          <div class="d-flex justify-content-around py-5">
+              <a type="submit" class="btn btn-success" href="app.component.html">Gravar</a>
+              <a type="submit" class="btn btn-success" href="app.component.html">Cancelar</a>
+          </div>
+      </div>
+
+      <!-- Excluir -->
+      <div [hidden]="mostrarBtnExcluir">
+          <div class="d-flex justify-content-around py-5">
+              <a type="submit" class="btn btn-success" href="app.component.html">Tem certeza que deseja excluir esse cadastro?</a>
+              <a type="submit" class="btn btn-success" href="app.component.html">Cancelar</a>
+          </div>
+      </div>
+
+      <!-- Procurar -->
+      <div [hidden]="mostrarBtnProcurar">
+          <div class="d-flex justify-content-around py-5">
+              <div class="col-md-6 d-flex">
+                  <input type="text" class="form-control" placeholder="Digite um nome a ser procurado">
+                  <a type="submit" class="btn btn-success" href="app.component.html">Procurar</a>
+              </div>
+          </div>
+      </div>
+  </div>
